@@ -1,0 +1,321 @@
+\hypertarget{classV__Cipher}{}\section{V\+\_\+\+Cipher Class Reference}
+\label{classV__Cipher}\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+
+
+{\ttfamily \#include $<$V\+\_\+\+Cipher.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classV__Cipher_a68ea464beb4da8350ef4fce188064011}{V\+\_\+\+Cipher} ()
+\item 
+\hyperlink{classV__Cipher_a846e2c926bf669919f19e8f615c7c931}{V\+\_\+\+Cipher} (string \hyperlink{Vigenere__decryptor_8cpp_aed0553574e356f2924be1dba0d5cae85}{c})
+\item 
+void \hyperlink{classV__Cipher_a662ad132468e1f19bff0363793c73fdb}{do\+\_\+index\+\_\+of\+\_\+correlation} (int \hyperlink{Vigenere__decryptor_8cpp_a23d9f7b5895f47c027059c43a4589e4f}{n\+Max})
+\item 
+void \hyperlink{classV__Cipher_af1c71fc31c7d46b8482ed8f59639a03b}{print\+\_\+index\+\_\+results} (int \hyperlink{Vigenere__decryptor_8cpp_a23d9f7b5895f47c027059c43a4589e4f}{n\+Max})
+\item 
+void \hyperlink{classV__Cipher_ab108ffaeeb1eeea99bf00c5f3e31f152}{suggest\+\_\+key\+\_\+length} (int \hyperlink{Vigenere__decryptor_8cpp_a23d9f7b5895f47c027059c43a4589e4f}{n\+Max})
+\item 
+void \hyperlink{classV__Cipher_af0bc1ef97538ecda35e81919e36a9821}{set\+\_\+key\+\_\+length} (int n)
+\item 
+void \hyperlink{classV__Cipher_a18c64a8435f0065ca3fe72a6453aba20}{make\+\_\+buckets} ()
+\item 
+void \hyperlink{classV__Cipher_a784213ea15ccc66b11da6f99a6050145}{print\+\_\+buckets} ()
+\item 
+void \hyperlink{classV__Cipher_a401617dd530014e12a80e1527e1d4e75}{do\+\_\+second\+\_\+method} ()
+\item 
+void \hyperlink{classV__Cipher_aeebb82bd8c2b24f6f6fd4de3c6019449}{print\+\_\+key} ()
+\item 
+void \hyperlink{classV__Cipher_aafe0bf05c4fb25c70da8a1180f346527}{decrypt} ()
+\item 
+void \hyperlink{classV__Cipher_a390f0f44fe5c02af3a6c53b8f25acb55}{print\+\_\+plaintext} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ double $>$ \hyperlink{classV__Cipher_af92458630ba4cd6e96c59489f852d43e}{rotate\+\_\+a\+\_\+matrix} (int j)
+\item 
+vector$<$ vector$<$ double $>$ $>$ \hyperlink{classV__Cipher_afabb5da97f1c27c34057b18d80178da0}{generate\+\_\+w\+\_\+vector} ()
+\item 
+double \hyperlink{classV__Cipher_aeb0ee00cbb2266bde59ec764a8350e62}{dot\+Me} (vector$<$ double $>$ a, vector$<$ double $>$ b)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ int, int $>$ \hyperlink{classV__Cipher_a7cbe0067ee10f26519ee8796fcce1ee7}{indices}
+\item 
+string \hyperlink{classV__Cipher_a957196ebb3d63de74d98aa055c16af52}{ciphertext}
+\item 
+string \hyperlink{classV__Cipher_a6dbd111ae202271a962ae9587efb55a3}{plaintext}
+\item 
+int \hyperlink{classV__Cipher_ae9cbb4bb2cd246dcd743676a079eaf1b}{key\+\_\+len}
+\item 
+map$<$ int, string $>$ \hyperlink{classV__Cipher_aa81441e1323df571461197536d49268d}{buckets}
+\item 
+string \hyperlink{classV__Cipher_ac874cd4b414b817b42254493f8c16292}{key}
+\item 
+vector$<$ double $>$ \hyperlink{classV__Cipher_abe2dc57a84ce049dbc372becec23ac93}{A}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{V\+\_\+\+Cipher()}{V_Cipher()}}]{\setlength{\rightskip}{0pt plus 5cm}V\+\_\+\+Cipher\+::\+V\+\_\+\+Cipher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_a68ea464beb4da8350ef4fce188064011}{}\label{classV__Cipher_a68ea464beb4da8350ef4fce188064011}
+Empty Constructor for the \hyperlink{classV__Cipher}{V\+\_\+\+Cipher} Class. \index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{V\+\_\+\+Cipher(string c)}{V_Cipher(string c)}}]{\setlength{\rightskip}{0pt plus 5cm}V\+\_\+\+Cipher\+::\+V\+\_\+\+Cipher (
+\begin{DoxyParamCaption}
+\item[{string}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_a846e2c926bf669919f19e8f615c7c931}{}\label{classV__Cipher_a846e2c926bf669919f19e8f615c7c931}
+Nonempty Constructior for the \hyperlink{classV__Cipher}{V\+\_\+\+Cipher} Class. This constructor allows for the class to be initialized with a ciphertext without needing the setter functions. 
+\begin{DoxyParams}{Parameters}
+{\em c} & This is a string that contains the ciphertext. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+
+\begin{DoxyEnumerate}
+\item Starts with an uninitialized class 
+\end{DoxyEnumerate}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\begin{DoxyEnumerate}
+\item Ends with a class instance with ciphertext defined. 
+\end{DoxyEnumerate}
+\end{DoxyPostcond}
+
+
+\subsection{Member Function Documentation}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{decrypt()}{decrypt()}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+\_\+\+Cipher\+::decrypt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_aafe0bf05c4fb25c70da8a1180f346527}{}\label{classV__Cipher_aafe0bf05c4fb25c70da8a1180f346527}
+This function takes the ciphertext and computed key from before, and undoes the Vigenere cipher to produce the plaintext. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!do\+\_\+index\+\_\+of\+\_\+correlation@{do\+\_\+index\+\_\+of\+\_\+correlation}}
+\index{do\+\_\+index\+\_\+of\+\_\+correlation@{do\+\_\+index\+\_\+of\+\_\+correlation}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{do\+\_\+index\+\_\+of\+\_\+correlation(int n\+Max)}{do_index_of_correlation(int nMax)}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+\_\+\+Cipher\+::do\+\_\+index\+\_\+of\+\_\+correlation (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Max}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_a662ad132468e1f19bff0363793c73fdb}{}\label{classV__Cipher_a662ad132468e1f19bff0363793c73fdb}
+This function computes the number of correlations for each integer 1$<$n$<$n\+Max. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Max} & The largest possible key length \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+-\/\#\+The indices map is empty 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+-\/\#\+The indices map will be filled with shift length, correlation pairs. 
+\end{DoxyPostcond}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!do\+\_\+second\+\_\+method@{do\+\_\+second\+\_\+method}}
+\index{do\+\_\+second\+\_\+method@{do\+\_\+second\+\_\+method}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{do\+\_\+second\+\_\+method()}{do_second_method()}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+\_\+\+Cipher\+::do\+\_\+second\+\_\+method (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_a401617dd530014e12a80e1527e1d4e75}{}\label{classV__Cipher_a401617dd530014e12a80e1527e1d4e75}
+This function performs the second method for a key attack on the ciphertext. This attack is the \char`\"{}\+Second Method\char`\"{} from the Trappe and Washington text. These actions are entirely composed of private members and functions of the class, so no input is requred from the user. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\begin{DoxyEnumerate}
+\item The key value is undefined
+\item The map of Weights and dotproducts is empty 
+\end{DoxyEnumerate}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\begin{DoxyEnumerate}
+\item The key is computed
+\item The Map of Weights is computed 
+\end{DoxyEnumerate}
+\end{DoxyPostcond}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!dot\+Me@{dot\+Me}}
+\index{dot\+Me@{dot\+Me}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{dot\+Me(vector$<$ double $>$ a, vector$<$ double $>$ b)}{dotMe(vector< double > a, vector< double > b)}}]{\setlength{\rightskip}{0pt plus 5cm}double V\+\_\+\+Cipher\+::dot\+Me (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{a, }
+\item[{vector$<$ double $>$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classV__Cipher_aeb0ee00cbb2266bde59ec764a8350e62}{}\label{classV__Cipher_aeb0ee00cbb2266bde59ec764a8350e62}
+This function computes the dot product of two vectors. \begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & This is the first vector. \\
+\hline
+{\em b} & This is the second vector. \\
+\hline
+\end{DoxyParams}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!generate\+\_\+w\+\_\+vector@{generate\+\_\+w\+\_\+vector}}
+\index{generate\+\_\+w\+\_\+vector@{generate\+\_\+w\+\_\+vector}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{generate\+\_\+w\+\_\+vector()}{generate_w_vector()}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<$ double $>$ $>$ V\+\_\+\+Cipher\+::generate\+\_\+w\+\_\+vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classV__Cipher_afabb5da97f1c27c34057b18d80178da0}{}\label{classV__Cipher_afabb5da97f1c27c34057b18d80178da0}
+This function computes the vector of letter frequency weights on each of the buckets of ciphertext. \begin{DoxyReturn}{Returns}
+vector$<$ vector$<$double$>$ $>$ 
+\end{DoxyReturn}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!make\+\_\+buckets@{make\+\_\+buckets}}
+\index{make\+\_\+buckets@{make\+\_\+buckets}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{make\+\_\+buckets()}{make_buckets()}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+\_\+\+Cipher\+::make\+\_\+buckets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_a18c64a8435f0065ca3fe72a6453aba20}{}\label{classV__Cipher_a18c64a8435f0065ca3fe72a6453aba20}
+This function uses the key length to generate the \char`\"{}buckets\char`\"{} of partitioned ciphertext. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+
+\begin{DoxyEnumerate}
+\item The private map buckets is uninitialized 
+\end{DoxyEnumerate}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+
+\begin{DoxyEnumerate}
+\item The private map buckets is filled with the partitioned ciphertext based on the key length. 
+\end{DoxyEnumerate}
+\end{DoxyPostcond}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!print\+\_\+buckets@{print\+\_\+buckets}}
+\index{print\+\_\+buckets@{print\+\_\+buckets}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{print\+\_\+buckets()}{print_buckets()}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+\_\+\+Cipher\+::print\+\_\+buckets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_a784213ea15ccc66b11da6f99a6050145}{}\label{classV__Cipher_a784213ea15ccc66b11da6f99a6050145}
+This function prints the map, buckets, in a human readable form. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!print\+\_\+index\+\_\+results@{print\+\_\+index\+\_\+results}}
+\index{print\+\_\+index\+\_\+results@{print\+\_\+index\+\_\+results}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{print\+\_\+index\+\_\+results(int n\+Max)}{print_index_results(int nMax)}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+\_\+\+Cipher\+::print\+\_\+index\+\_\+results (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Max}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_af1c71fc31c7d46b8482ed8f59639a03b}{}\label{classV__Cipher_af1c71fc31c7d46b8482ed8f59639a03b}
+This function prints the indices map in a human readable format. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Max} & The largest index from the map that we want to print. \\
+\hline
+\end{DoxyParams}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!print\+\_\+key@{print\+\_\+key}}
+\index{print\+\_\+key@{print\+\_\+key}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{print\+\_\+key()}{print_key()}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+\_\+\+Cipher\+::print\+\_\+key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_aeebb82bd8c2b24f6f6fd4de3c6019449}{}\label{classV__Cipher_aeebb82bd8c2b24f6f6fd4de3c6019449}
+This function takes the results of the second method attack, and prints the computed key to the user in a human readable form. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!print\+\_\+plaintext@{print\+\_\+plaintext}}
+\index{print\+\_\+plaintext@{print\+\_\+plaintext}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{print\+\_\+plaintext()}{print_plaintext()}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+\_\+\+Cipher\+::print\+\_\+plaintext (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_a390f0f44fe5c02af3a6c53b8f25acb55}{}\label{classV__Cipher_a390f0f44fe5c02af3a6c53b8f25acb55}
+This function prints the decrypted plaintext for the user. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!rotate\+\_\+a\+\_\+matrix@{rotate\+\_\+a\+\_\+matrix}}
+\index{rotate\+\_\+a\+\_\+matrix@{rotate\+\_\+a\+\_\+matrix}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+a\+\_\+matrix(int j)}{rotate_a_matrix(int j)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ V\+\_\+\+Cipher\+::rotate\+\_\+a\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classV__Cipher_af92458630ba4cd6e96c59489f852d43e}{}\label{classV__Cipher_af92458630ba4cd6e96c59489f852d43e}
+This function provides the rotated A matrix to the function who calls it. This A matrix is the predefined frequency vector from Trappe and Washington, that is used for computing the dot product in the frequency attack on the ciphertext. \begin{DoxyReturn}{Returns}
+vector$<$double$>$ 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em j} & This is the number of spaces that we would like to rotate the A matrix. \\
+\hline
+\end{DoxyParams}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!set\+\_\+key\+\_\+length@{set\+\_\+key\+\_\+length}}
+\index{set\+\_\+key\+\_\+length@{set\+\_\+key\+\_\+length}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{set\+\_\+key\+\_\+length(int n)}{set_key_length(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+\_\+\+Cipher\+::set\+\_\+key\+\_\+length (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_af0bc1ef97538ecda35e81919e36a9821}{}\label{classV__Cipher_af0bc1ef97538ecda35e81919e36a9821}
+This function takes user input and sets the ciphers key length. This input will be found in the main function, as that is not practicle to partition to this file. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The length of the key in characters that the user has decided upon. \\
+\hline
+\end{DoxyParams}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!suggest\+\_\+key\+\_\+length@{suggest\+\_\+key\+\_\+length}}
+\index{suggest\+\_\+key\+\_\+length@{suggest\+\_\+key\+\_\+length}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{suggest\+\_\+key\+\_\+length(int n\+Max)}{suggest_key_length(int nMax)}}]{\setlength{\rightskip}{0pt plus 5cm}void V\+\_\+\+Cipher\+::suggest\+\_\+key\+\_\+length (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Max}
+\end{DoxyParamCaption}
+)}\hypertarget{classV__Cipher_ab108ffaeeb1eeea99bf00c5f3e31f152}{}\label{classV__Cipher_ab108ffaeeb1eeea99bf00c5f3e31f152}
+This program takes the minimum high value, and suggests the potential key length to the user. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Max} & The largest key length possible for comparison. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!A@{A}}
+\index{A@{A}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{A}{A}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ V\+\_\+\+Cipher\+::A\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classV__Cipher_abe2dc57a84ce049dbc372becec23ac93}{}\label{classV__Cipher_abe2dc57a84ce049dbc372becec23ac93}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!buckets@{buckets}}
+\index{buckets@{buckets}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{buckets}{buckets}}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int, string$>$ V\+\_\+\+Cipher\+::buckets\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classV__Cipher_aa81441e1323df571461197536d49268d}{}\label{classV__Cipher_aa81441e1323df571461197536d49268d}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!ciphertext@{ciphertext}}
+\index{ciphertext@{ciphertext}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{ciphertext}{ciphertext}}]{\setlength{\rightskip}{0pt plus 5cm}string V\+\_\+\+Cipher\+::ciphertext\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classV__Cipher_a957196ebb3d63de74d98aa055c16af52}{}\label{classV__Cipher_a957196ebb3d63de74d98aa055c16af52}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!indices@{indices}}
+\index{indices@{indices}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{indices}{indices}}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int,int$>$ V\+\_\+\+Cipher\+::indices\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classV__Cipher_a7cbe0067ee10f26519ee8796fcce1ee7}{}\label{classV__Cipher_a7cbe0067ee10f26519ee8796fcce1ee7}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!key@{key}}
+\index{key@{key}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{key}{key}}]{\setlength{\rightskip}{0pt plus 5cm}string V\+\_\+\+Cipher\+::key\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classV__Cipher_ac874cd4b414b817b42254493f8c16292}{}\label{classV__Cipher_ac874cd4b414b817b42254493f8c16292}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!key\+\_\+len@{key\+\_\+len}}
+\index{key\+\_\+len@{key\+\_\+len}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{key\+\_\+len}{key_len}}]{\setlength{\rightskip}{0pt plus 5cm}int V\+\_\+\+Cipher\+::key\+\_\+len\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classV__Cipher_ae9cbb4bb2cd246dcd743676a079eaf1b}{}\label{classV__Cipher_ae9cbb4bb2cd246dcd743676a079eaf1b}
+\index{V\+\_\+\+Cipher@{V\+\_\+\+Cipher}!plaintext@{plaintext}}
+\index{plaintext@{plaintext}!V\+\_\+\+Cipher@{V\+\_\+\+Cipher}}
+\subsubsection[{\texorpdfstring{plaintext}{plaintext}}]{\setlength{\rightskip}{0pt plus 5cm}string V\+\_\+\+Cipher\+::plaintext\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classV__Cipher_a6dbd111ae202271a962ae9587efb55a3}{}\label{classV__Cipher_a6dbd111ae202271a962ae9587efb55a3}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{V__Cipher_8h}{V\+\_\+\+Cipher.\+h}\item 
+src/\hyperlink{V__Cipher_8cpp}{V\+\_\+\+Cipher.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,8 @@
+\hypertarget{index_Introduction}{}\section{Introduction}\label{index_Introduction}
+The code enclosed in this project is intended to be used to perform a maximum likelihood decoding attack on a piece of ciphertext that is encoded using a Vigenere Cipher. \hypertarget{index_Compilation}{}\section{Compilation}\label{index_Compilation}
+\hypertarget{index_MAKEFILE}{}\subsection{M\+A\+K\+E\+F\+I\+LE}\label{index_MAKEFILE}
+The code enclosed in this project contains a prewritten makefile that will compile the files into four different executables, as seen below. Given how the code is written, the execution of these files must be from the /src/ folder, as the ciphertext locations are hard coded relative to that location. \hypertarget{_}{}\subsection{}\label{_}
+This executable will prompt the user for input about which ciphertext that is desired, and output the number of coincidences for each index in that text. \hypertarget{_}{}\subsection{}\label{_}
+This executable will perform as stage1.\+exe, but will additionally prompt the user for what index/key length is desired and then compute the associated \char`\"{}buckets\char`\"{} of ciphertext. \hypertarget{_}{}\subsection{}\label{_}
+This executable will function as stage2.\+exe, but will use the method outlined in Trappe and Washington to actually compute the key \hypertarget{_}{}\subsection{}\label{_}
+This executable will prompt the user for which ciphertext to use, and then ask for the key length. Then it will compute the key and display the decrypted plaintext. 
